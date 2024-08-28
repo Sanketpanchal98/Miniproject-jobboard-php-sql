@@ -3,21 +3,17 @@ include 'partials/_dbconnect.php';
 if($_SERVER['REQUEST_METHOD'] == "POST" || isset($_POST['username'])){
     $username = $_POST["username"];
     $password = $_POST["password"];
-    $hash = password_hash($password , PASSWORD_DEFAULT);
-    
-    $result = mysqli_query( $con , "SELECT * FROM temptab where username= '$username' "  );
+    $role = $_POST["role"];
+    $result = mysqli_query( $conn , "SELECT * FROM $role where username= '$username'"  );
     $num= mysqli_num_rows( $result );
     if($num === 1){
-        while($row = mysqli_fetch_assoc( $result )){
-            if(password_verify(  $password , $row["password"] )){
-            session_start();
-            $_SESSION['islog'] = true;
-            $_SESSION['username'] = $username;
-            header('location: profile.php');
+        while($row = $result->fetch_assoc()){
+            if(password_verify( '$password' , $row["password"])){
+              echo "<div class='alert alert-success alert-dismissible fade show' role='alert'> Authenticated Successfully!!  <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button></div>";
             }
         }
     } else {
-        echo "password is wrong";
+        echo "<div class='alert alert-danger alert-dismissible fade show' role='alert'> Invalid Credentials!!  <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button></div>";
     }
 }
 ?>
@@ -28,61 +24,37 @@ if($_SERVER['REQUEST_METHOD'] == "POST" || isset($_POST['username'])){
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign Up</title>
+    <title>Log in</title>
     <link rel="stylesheet" href="Stylesheets/signup.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </head>
 <body>
     <div class="form">
-        <img src="images/bgimage.jpg" alt="images/bgimage.jpg" class="bgimage">
+        <img src="images/bgimage.jpg" alt="bgimage" class="bgimage">
         <div class="login">
-            <h1>Sign Up</h1>
-            <form>
+            <h4>Login</h4>
+            <form method="post" action="login.php">
                 <div class="input">
                     <label for="username">Username or Email</label>
-                    <input type="text" id="username" name="username" placeholder="Username or Email" required>
+                    <input type="text" id="username" placeholder="Username or Email" name="username" required>
                 </div>
                 <div class="input">
-                    <label for="create-password">Create Password</label>
-                    <input type="password" id="create-password" name="create-password" placeholder="Create Password" required>
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="Password" name="password" required>
                 </div>
-                <div class="input">
-                    <label for="confirm-password">Confirm Password</label>
-                    <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm Password" required>
+                <div class="input checkbox">
+                    <label for="role">Organization</label>
+                    <input type="radio"name="role" class="role" value="employer09">
+                    <label for="role">Candidate</label>
+                    <input type="radio" name="role" value="candidate17" class="role">
                 </div>
-                <button type="submit">Sign Up</button>
+                <button type="submit">Log In</button>
+                <div class="links">
+                    <a href="signin.php">Sign Up</a>
+                </div>
             </form>
         </div>
     </div>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const form = document.querySelector("form");
-            const passwordInput = document.getElementById("create-password");
-            const confirmPasswordInput = document.getElementById("confirm-password");
-
-            form.addEventListener("submit", function (event) {
-                if (passwordInput.value == confirmPasswordInput.value) {
-                    event.preventDefault(); 
-                    window.location.href = "home.html";
-                    
-                } else {
-                    
-                    alert("Passwords do not match. Please try again.");
-                    confirmPasswordInput.focus();
-                }
-            });
-
-            confirmPasswordInput.addEventListener("input", function () {
-                if (passwordInput.value !== confirmPasswordInput.value) {
-                    confirmPasswordInput.setCustomValidity("Passwords do not match.");
-                } else {
-                    confirmPasswordInput.setCustomValidity("");
-                }
-            });
-        });
-    </script>
-    
-    
-    
 </body>
 </html>
