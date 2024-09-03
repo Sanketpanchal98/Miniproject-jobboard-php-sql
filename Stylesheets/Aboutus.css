@@ -1,0 +1,270 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+
+/*Nav Bar*/
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #ccf4f3;  
+}
+.nav{
+    height: 75px;
+    background-color: #ccf4f3;
+    display: flex; 
+    align-items: center;
+    justify-content: space-evenly;
+}
+.bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 40px;
+    padding: 4px;
+    border-radius: 10px;
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+    position: relative;
+  }
+ 
+  .bar i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .bar:hover {
+    background-color: #cccccc;
+    height: 40px;
+    padding: 4px;
+    width: 60px;
+    border-radius: 10px;
+  }
+  
+.logo{
+    height: 100px;
+}
+.search {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    padding: 5px 10px;
+    border-radius: 20px;
+    width: 400px; 
+    border: 1px solid #ccc;
+  }
+  .search i {
+    color: #555;
+    margin-right: 8px;
+  }
+  .search input {
+    border: none;
+    outline: none;
+    padding: 5px;
+    flex-grow: 1;
+    font-size: 16px;
+  }
+.items a{
+    text-decoration: none;
+    color: black;
+    font-size: 22px;
+}
+.items{
+    width: 600px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.hover-effect {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px;
+    border-radius: 10px;
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+    position: relative;
+    text-decoration: none;
+  }
+  
+  .hover-effect i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .hover-effect:hover {
+    background-color: #cccccc;
+  }
+  
+  .item {
+    width: 100px;
+    height: 40px;
+  }
+  item2{
+    width: 100px;
+    height: 40px;
+  }
+  .button{
+    width: 200px;
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .but{
+    height: 30px;
+    width: 80px;
+    border-radius: 15px;
+    background-color: #ffb9e4;
+    font-size: 16px;
+    font-family:'Times New Roman', Times, serif;
+    font-weight: bold;
+    border: none;
+  }
+  .but:hover{
+    background-color:   #fc91c6;
+  }
+
+
+  
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+section {
+    background-color: #f7f7f7;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2, h3 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+p {
+    margin-bottom: 20px;
+}
+
+.team-members {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.team{
+    height: 1200px;
+    width: 100%;
+}
+.team-member {
+    height: 300px;
+    margin: 20px;
+    width: calc(25% - 20px);
+}
+
+.team-member img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+    border-radius: 20px;
+}
+
+.team-member h3 {
+    margin-top: 10px;
+}
+
+.hero {
+    background-color: rgb(190, 219, 224);
+    color: black;
+    padding: 50px;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.project {
+    background-image: linear-gradient(to bottom, #f7f7f7, #fff);
+    padding: 50px;
+}
+
+.project h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.acknowledgments {
+    background-image: linear-gradient(to bottom, #fff, #f7f7f7);
+    padding: 50px;
+}
+
+.acknowledgments h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.contact {
+    background-image: linear-gradient(to bottom, #f7f7f7, #fff);
+    padding: 50px;
+}
+
+.contact h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    clear: both;
+}
+
+footer p {
+    margin-bottom: 0;
+}
+
+/* Responsive design */
+
+@media only screen and (max-width: 768px) {
+    .team-members {
+        flex-direction: column;
+    }
+
+    .team-member {
+        width: 100%;
+        margin: 20px 0;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .hero {
+        padding: 20px;
+    }
+
+    .hero h1 {
+        font-size: 24px;
+    }
+
+    .project, .acknowledgments, .contact {
+        padding: 20px;
+    }
+
+    .project h2, .acknowledgments h2, .contact h2 {
+        font-size: 18px;
+    }
+}

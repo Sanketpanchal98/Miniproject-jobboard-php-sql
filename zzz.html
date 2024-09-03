@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .jobform {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        label {
+            display: block;
+        }
+        .jobform input , textarea{
+            height: 30px;
+            border-radius: 15px;
+            border-color: blue;
+        }
+        .jobform textarea {
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <form class='jobform' method='post' action='createjob.php'>
+        <label for="title">Title</label>
+        <input type='text' name='title' id='title'>
+        <label for='Description'>Description</label>
+        <textarea name='desc' id='Description'></textarea>
+    </form>
+</body>
+</html>

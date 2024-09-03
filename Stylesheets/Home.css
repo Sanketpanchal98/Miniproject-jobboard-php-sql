@@ -1,0 +1,397 @@
+
+/*Nav Bar*/
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  background-color: #ccf4f3;  
+}
+.nav{
+  height: 75px;
+  background-color: #ccf4f3;
+  display: flex; 
+  align-items: center;
+  justify-content: space-evenly;
+}
+.bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 40px;
+  padding: 4px;
+  border-radius: 10px;
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+  position: relative;
+}
+
+.bar i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.bar:hover {
+  background-color: #cccccc;
+  height: 40px;
+  padding: 4px;
+  width: 60px;
+  border-radius: 10px;
+}
+
+.logo{
+  height: 100px;
+}
+.search {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  padding: 5px 10px;
+  border-radius: 20px;
+  width: 400px; 
+  border: 1px solid #ccc;
+}
+.search i {
+  color: #555;
+  margin-right: 8px;
+}
+.search input {
+  border: none;
+  outline: none;
+  padding: 5px;
+  flex-grow: 1;
+  font-size: 16px;
+}
+.items a{
+  text-decoration: none;
+  color: black;
+  font-size: 22px;
+}
+.items{
+  width: 600px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.hover-effect {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+  border-radius: 10px;
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+  position: relative;
+  text-decoration: none;
+}
+
+.hover-effect i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.hover-effect:hover {
+  background-color: #cccccc;
+}
+
+.item {
+  width: 100px;
+  height: 40px;
+}
+item2{
+  width: 100px;
+  height: 40px;
+}
+.button{
+  width: 200px;
+  display: flex;
+  justify-content: space-evenly;
+}
+.but{
+  height: 30px;
+  width: 80px;
+  border-radius: 15px;
+  background-color: #ffb9e4;
+  font-size: 16px;
+  font-family:'Times New Roman', Times, serif;
+  font-weight: bold;
+  border: none;
+}
+.but:hover{
+  background-color:   #fc91c6;
+}
+
+/* ---------------------------------Nav section Ends  -------------------------------*/
+
+.hero{
+    border-top: 5px solid white;
+
+}
+.heroimg{
+    object-fit: contain;
+    width: 100%;
+    border-bottom: 5px solid  white;
+
+}
+.box{
+  height: 300px;
+  width: 250px;
+  display: flex;
+  background-color: white;
+  border-radius: 10px;
+  border: 1px solid rgb(255, 203, 203);
+}
+.card{
+  display: flex;
+  margin-top: 80px;
+  justify-content: center;
+  gap: 50px;
+}
+
+.h2{
+  margin-top: 30px;
+  text-align: center;
+}
+.but2{
+  margin-top: 80px;
+  display: flex;
+  justify-content: center;
+}
+.but1{
+  height: 40px;
+  width: 200px;
+  background-color: white;
+  border-radius: 20px;
+  font-size: 16px;
+  color: rgba(64, 64, 248, 0.397);
+  border: 1px solid gray;
+}
+
+.companies{
+  height: 100px;
+  width: 60%;
+  margin-left: 350px;
+  margin-top: 50px;
+  display: block;
+}
+
+.gog{
+  height: 90px;
+  width: 90px;
+  border: 1px solid rgb(248, 204, 204);
+  border-radius: 10px;
+  background-color: white;
+  
+}
+.box2{
+  margin-left: -40px;
+  display: flex;
+  justify-content: space-around;
+}
+.comp2{
+  height: 100px;
+  width: 760px;
+  margin-left: 95px;
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-around;
+}
+.comp3{
+  width: 500px;
+  margin-left: 225px;
+  height: 100px;
+  display: flex;
+  justify-content: space-around;
+}
+
+footer {
+  height: 400px;
+  width: 100vw;
+  background-color: #F2F7F6;
+  margin-top: 300px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 50px;
+  box-sizing: border-box;
+}
+
+.head1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.log {
+  height: 60px;
+  width: 60px;
+  background-color: white;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  font-size: 30px;
+  border: 1px solid rgb(235, 189, 189);
+}
+
+
+.head1 p {
+  font-size: 18px;
+  color: black;
+}
+
+.section {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.bb {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 20px;
+}
+
+.next, .contact, .logos {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.next h2, .contact h2, .logos h2 {
+  font-size: 18px;
+  color: black;
+  margin-bottom: 10px;
+}
+
+.next p, .contact p, .logos p {
+  font-size: 18px;
+  color: black;
+}
+
+.next button, .contact button {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  margin-top: 10px;
+  border-radius: 10px;
+  font-size: 16px;
+}
+
+.logos .all {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+.all{
+  font-size: 20px;
+}
+.logos i {
+  font-size: 20px;
+  color: black;
+  cursor: pointer;
+}
+
+.link {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.company, .company1, .company2 {
+  flex: 1;
+}
+
+.company ul, .company1 ul, .company2 ul {
+  list-style: none;
+  padding: 0;
+}
+.company ul{
+  margin-top: 10px;
+}
+.company ul a, .company1 ul a, .company2 ul a {
+  display: block;
+  text-decoration: none;
+  color: black;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.company ul a:hover, .company1 ul a:hover, .company2 ul a:hover {
+  cursor: pointer;
+}
+.rel{
+  height: 100px;
+  margin-left: 30px;
+}
+.info{
+  margin-left: -190px;
+  margin-top: 100px;
+  height: 80px;
+  width: 200px;
+  background-color: #f4e3e3;
+  border-radius: 10px;
+}
+.info h2{
+  margin-left: 10px;
+}
+.rating{
+  margin-left: 10px;
+}
+
+.description{
+  margin-top: 200px;
+  margin-left: -200px;
+  width: 230px;
+}
+
+.button{
+  height: 30px;
+  width: 100px;
+  margin-top: 260px;
+  margin-left: -180px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fcf3f3;
+  border: 1px solid rgb(246, 238, 238);
+  color: blue;
+}
+.info1{
+  margin-left: -180px;
+  margin-top: 100px;
+  height: 80px;
+  width: 200px;
+  background-color: #f4e3e3;
+  border-radius: 10px;
+}
+.info1 h2{
+  margin-left: 10px;
+}
+.rel1{
+  height: 150px;
+  margin-top: -20px;
+  margin-left: 50px;
+}
+
+.rel2{
+  height: 100px;
+}
+.info2{
+  margin-left: -180px;
+  margin-top: 100px;
+  height: 80px;
+  width: 230px;
+  background-color: #f4e3e3;
+  border-radius: 10px;
+
+}
+.info2 h2{
+  margin-left: 10px;
+}

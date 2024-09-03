@@ -10,7 +10,7 @@ $sql = "select * from $role where username='$username'";
 $result = mysqli_query($conn , $sql);
 $num = mysqli_num_rows($result);
 if($num == 1){
-    echo "<div class='alert alert-danger alert-dismissible fade show' role='alert'>  Username Already Taken!!  <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button></div>";
+    header('location : profile.php');
 } else {
     $hash = password_hash('$password' , PASSWORD_DEFAULT); //password hashing algorithm
     //writing query for Mysql

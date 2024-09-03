@@ -1,6 +1,7 @@
 <?php
 include 'partials/_dbconnect.php';
-if($_SERVER['REQUEST_METHOD'] == "POST" || isset($_POST['username'])){
+$isloggedin = false;
+if($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['username'])&&isset($_POST['password'])&&isset($_POST['role'])){
     $username = $_POST["username"];
     $password = $_POST["password"];
     $role = $_POST["role"];
@@ -9,7 +10,12 @@ if($_SERVER['REQUEST_METHOD'] == "POST" || isset($_POST['username'])){
     if($num === 1){
         while($row = $result->fetch_assoc()){
             if(password_verify( '$password' , $row["password"])){
-              echo "<div class='alert alert-success alert-dismissible fade show' role='alert'> Authenticated Successfully!!  <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button></div>";
+              $isloggedin = true;
+              session_start();
+              $_SESSION['username'] = $username;
+              $_SESSION['name'] = $row["name"];
+              $_SESSION['role'] = $role;
+              header("Location: profile.php");
             }
         }
     } else {
@@ -56,5 +62,6 @@ if($_SERVER['REQUEST_METHOD'] == "POST" || isset($_POST['username'])){
             </form>
         </div>
     </div>
+
 </body>
 </html>

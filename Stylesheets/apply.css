@@ -1,0 +1,180 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url("login.png");
+    object-fit: contain;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+
+.container {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 600px;
+    height: 600px;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 16px;
+    color: #555;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus{
+    outline: none;
+    border-color: #4CAF50;
+}
+
+.button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 210px;
+    margin-top: 30px;
+}
+
+.button:hover {
+    background-color: #45a049;
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.checkbox {
+    margin-right: 10px;
+}
+
+.checkbox-label {
+    font-size: 14px;
+    color: #555;
+}
+
+.terms-and-conditions {
+    text-align: center;
+    font-size: 12px;
+    color: #555;
+    margin-top: 60px;
+    margin-left: -80px;
+}
+
+.terms-and-conditions a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+.terms-and-conditions a:hover {
+    text-decoration: underline;
+}
+
+.on-registering {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    margin-left: 200px;
+    margin-top: -20%;
+}
+
+.on-registering ul {
+    list-style: none;
+    padding: 0;
+}
+
+.on-registering li {
+    margin-bottom: 10px;
+}
+
+.on-registering li:before {
+    content: '✔';
+    color: #4CAF50;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+.work-status {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    width: 500px;
+    gap: 10px;
+    margin-left: 50px;
+}
+
+.work-status .option {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.work-status .icon {
+    width: 30px;
+    height: 30px;
+    fill: #ccc;
+}
+.small{
+    display: flex;
+    font-size: 10px;
+    margin-top: 10px;
+}
+
+.small1{
+    display: flex;
+    width: 200px;
+}
+#updates{
+    margin-top: -5px;
+}
+
+#full-name{
+    margin-top: 20px;
+}
